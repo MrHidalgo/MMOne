@@ -9,8 +9,8 @@
    * CALLBACK
    * =============================================
    */
-  const langBtn = () => {
-    const elem = document.querySelectorAll("[lang-js]");
+  const initChangeActiveClass = (classNameElem) => {
+    const elem = document.querySelectorAll(classNameElem);
 
     for(var btn of elem) {
       btn.addEventListener('click', (ev) => {
@@ -33,7 +33,8 @@
     initPreventBehavior();
     // lib
     // callback
-    langBtn();
+    initChangeActiveClass("[lang-js]");
+    initChangeActiveClass("[nav-js]");
   };
   initNative();
 })();

@@ -1,21 +1,37 @@
 // LOGOTYPE :: START
 
 .logo {
+  &--header {
+    .logo__link {
+      color: $c-63bded;
+
+      span {
+        color: $c-009bed;
+      }
+
+      &:hover {
+        color: $c-009bed;
+        @include transition(color);
+      }
+    }
+  }
+
+  &--footer {
+    padding-bottom: 10px;
+
+    .logo__link {
+      color: $c-white;
+    }
+  }
+
   &__link {
     display: flex;
-    color: $c-63bded;
     line-height: 1;
     font-size: 20px;
     font-family: "Lato", sans-serif;
     @include transition(color);
 
-    &:hover {
-      color: $c-009bed;
-      @include transition(color);
-    }
-
     span {
-      color: $c-009bed;
       font-weight: 700;
     }
   }

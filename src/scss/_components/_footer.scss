@@ -1,5 +1,22 @@
 // FOOTER :: START
 
-.footer {}
+.footer {
+  background-color: $c-021124;
+
+  &__wrapper {
+    display: flex;
+    min-height: 281px;
+    padding-top: 80px;
+
+    &-left {
+      width: 553px;
+      min-width: 200px;
+    }
+    &-right {
+      width: 100%;
+      max-width: calc(100% - 553px);
+    }
+  }
+}
 
 // FOOTER :: END

@@ -6,12 +6,13 @@ mixin navlink(classMod, hrefVal, nameVal)
       href= hrefVal
       title= nameVal
       class!= " " + classMod
+      nav-js
     )!= nameVal
 
 nav.nav
   ul.nav__list
     each val, idx in dataObj.nav
-      if(contentClassName === "home" && idx === 0)
+      if(contentClassName === "jobs" && idx === 6)
         +navlink("is-active", dataObj.nav[idx].href, dataObj.nav[idx].val)
       else
         +navlink("", dataObj.nav[idx].href, dataObj.nav[idx].val)

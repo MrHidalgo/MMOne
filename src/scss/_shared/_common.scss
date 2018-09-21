@@ -1,3 +1,33 @@
 // COMMON :: START
 
+// copyright
+.copyright {
+  p {
+    color: $c-white;
+    font-size: 11px;
+  }
+}
+// copyright :: end
+
+// address
+.address {
+  color: $c-white;
+
+  &__text {
+    padding-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  &__phone-wrap {
+    padding-bottom: 10px;
+  }
+
+  a,
+  p {
+    color: $c-white;
+    font-size: 12px;
+  }
+}
+// address:: end
+
 // COMMON :: END

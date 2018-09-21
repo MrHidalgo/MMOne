@@ -3,5 +3,32 @@
 footer#footer.footer
   .c-grid
     .footer__wrapper
+      .footer__wrapper-left
+        .logo--footer
+          include ../macros/_logotype
+
+        .copyright
+          p!= "Copyright © 2014 MMOne.com.mm"
+
+      .footer__wrapper-right
+
+        .address
+          p.address__text!= "No.99, Room No.5 (C+D), 99 Condo, <br>Dhammazadi Road, Kamaryut Township, <br>Yangon Myanmar"
+
+          .address__phone-wrap
+            a(
+              href="tel:01-502 077"
+              title="" class=""
+            )!= "01-502 077 "
+            | ,
+            a(
+              href="tel:09 977 285 887"
+              title="" class=""
+            )!= " 09 977 285 887"
+
+          a.address__email(
+            href="mailto:info@MMOne.com.mm"
+            title="" class=""
+          )!= "info@MMOne.com.mm"
 
 // FOOTER :: END
