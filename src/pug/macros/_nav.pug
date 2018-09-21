@@ -1,5 +1,19 @@
 // NAV :: START
 
+mixin navlink(classMod, hrefVal, nameVal)
+  li.nav__item
+    a.nav__link(
+      href= hrefVal
+      title= nameVal
+      class!= " " + classMod
+    )!= nameVal
+
 nav.nav
+  ul.nav__list
+    each val, idx in dataObj.nav
+      if(contentClassName === "home" && idx === 0)
+        +navlink("is-active", dataObj.nav[idx].href, dataObj.nav[idx].val)
+      else
+        +navlink("", dataObj.nav[idx].href, dataObj.nav[idx].val)
 
 // NAV :: END

@@ -12,7 +12,7 @@
 ///
 /// GENERATED
 /// ===============
-//@import "_generated/spritePNG";
+@import "_generated/spritePNG";
 //@import "_generated/spriteSVG";
 ///
 /// SHARED
@@ -25,15 +25,16 @@
 //@import "_shared/magnificPopup";
 //@import "_shared/swiper";
 @import "_shared/objectFitImages";
-//@import "_shared/iconPNG";
+@import "_shared/iconPNG";
 //@import "_shared/iconSVG";
 ///
 /// MACROS
 /// ===============
-//@import "_macros/logotype";
-//@import "_macros/nav";
+@import "_macros/logotype";
+@import "_macros/language";
+@import "_macros/nav";
 ///
 /// COMPONENTS
 /// ===============
-//@import "_components/header";
+@import "_components/header";
 //@import "_components/footer";

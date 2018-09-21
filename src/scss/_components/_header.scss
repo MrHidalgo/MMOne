@@ -1,5 +1,59 @@
 // HEADER :: START
 
-.header {}
+.header {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: $c-white;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 68px;
+
+    &-left {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 200px;
+    }
+
+    &-middle {
+      width: 100%;
+      max-width: calc(100% - 170px);
+      padding-left: 14px;
+    }
+
+    &-right {
+      display: flex;
+      justify-content: flex-end;
+      width: 170px;
+    }
+  }
+
+  &--mobile {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: calc(100% - 200px);
+    height: 100%;
+  }
+
+  &__line {
+    width: 1px;
+    height: 20px;
+    background-color: $c-ddd;
+
+    &-0 {
+      margin-right: 7px;
+    }
+
+    &-1 {
+      margin-right: 40px;
+    }
+  }
+}
 
 // HEADER :: END
