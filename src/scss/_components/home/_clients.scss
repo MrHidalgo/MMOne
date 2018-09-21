@@ -1,0 +1,73 @@
+// CLIENTS :: START
+
+.clients {
+  padding-top: 120px;
+  padding-bottom: 80px;
+
+  .c-grid-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1920px;
+  }
+
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-1 {
+      display: none;
+    }
+
+    &-wrapper {
+      position: relative;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    &-img {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: calc(100% / 6);
+      height: 320px;
+      @include transition(background-color);
+
+      img {
+        @include transition(filter);
+      }
+
+      &:hover {
+        background-color: $c-8eca41;
+        @include transition(background-color);
+
+        img {
+          filter: brightness(0) invert(1);
+          @include transition(filter);
+        }
+      }
+    }
+  }
+
+  &__bullets {
+    display: flex;
+    justify-content: center;
+
+    a {
+      width: 16px;
+      height: 16px;
+      margin-left: 8px;
+      margin-right: 8px;
+      border-radius: 100%;
+      background-color: $c-999;
+      @include transition(background-color);
+
+      &.is-active {
+        background-color: $c-009bed;
+        @include transition(background-color);
+      }
+    }
+  }
+}
+
+// CLIENTS :: END

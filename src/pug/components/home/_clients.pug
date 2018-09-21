@@ -1,0 +1,62 @@
+// CLIENTS :: START
+
+mixin clientsImage(imgName)
+  .clients__block-img
+    img(
+      srcset="./img/" + imgName + ".png, ./img/" + imgName + "@2x.png 2x"
+      alt="" title=""
+    )
+
+
+section#clients.clients
+  .c-grid-fluid
+
+    h1.clients__title.title!= "Our clients"
+
+    .clients__block-wrapper
+      .clients__block.clients__block-0
+        +clientsImage("img-clients-0")
+        +clientsImage("img-clients-1")
+        +clientsImage("img-clients-2")
+        +clientsImage("img-clients-3")
+        +clientsImage("img-clients-4")
+        +clientsImage("img-clients-5")
+        +clientsImage("img-clients-0")
+        +clientsImage("img-clients-1")
+        +clientsImage("img-clients-2")
+        +clientsImage("img-clients-3")
+        +clientsImage("img-clients-4")
+        +clientsImage("img-clients-5")
+
+      .clients__block.clients__block-1
+        +clientsImage("img-clients-0")
+        +clientsImage("img-clients-1")
+        +clientsImage("img-clients-2")
+        +clientsImage("img-clients-3")
+        +clientsImage("img-clients-4")
+        +clientsImage("img-clients-5")
+        +clientsImage("img-clients-0")
+        +clientsImage("img-clients-1")
+        +clientsImage("img-clients-2")
+        +clientsImage("img-clients-3")
+        +clientsImage("img-clients-4")
+        +clientsImage("img-clients-5")
+
+    .clients__bullets
+      a.is-active(
+        href="#"
+        title="" class=""
+        data-id="0"
+        bullets-js
+      )
+      a(
+        href="#"
+        title="" class=""
+        data-id="0"
+        bullets-js
+      )
+
+
+
+
+// CLIENTS :: END

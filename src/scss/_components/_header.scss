@@ -8,6 +8,10 @@
   width: 100vw;
   background-color: $c-white;
 
+  &--fixed {
+    box-shadow: 0 1px 7px 1px rgba($c-black, 0.05);
+  }
+
   &__wrapper {
     display: flex;
     align-items: center;
