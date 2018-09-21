@@ -1,0 +1,140 @@
+// HOLDINGS :: START
+
+.holdings {
+  position: relative;
+  min-height: 580px;
+
+  &__bg {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &-1 {
+      background-image: url("../img/mea.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &-left,
+    &-right {
+      position: absolute;
+      top: 0;
+      height: 100%;
+    }
+
+    &-left {
+      left: 0;
+      width: 53%;
+      background-image: url("../img/shweproperty.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &-right {
+      right: 0;
+      width: 47%;
+      background-image: url("../img/jobnet.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  &__wrapper {
+    z-index: 1;
+    position: relative;
+
+
+    &-0 {
+      display: flex;
+    }
+
+    &-left {
+      width: 55%;
+    }
+    &-right {
+      width: 45%;
+    }
+  }
+
+  &__block {
+    display: block;
+    width: 100%;
+    max-width: 429px;
+    padding-top: 120px;
+    padding-bottom: 114px;
+
+    &-0 {
+      margin-left: 100px;
+
+      &:hover {
+        span {
+          color: #f4c82c;
+          @include transition(color);
+        }
+      }
+    }
+
+    &-1 {
+      margin-left: 50px;
+
+      &:hover {
+        span {
+          color: $c-white;
+          @include transition(color);
+        }
+      }
+    }
+
+    &-2 {
+      margin-left: auto;
+      margin-right: auto;
+
+      &:hover {
+        span {
+          color: #f4c82c;
+          @include transition(color);
+        }
+      }
+
+      img {
+
+      }
+
+      span {
+        padding-left: 15px;
+        @include transition(color);
+      }
+
+      p {
+        padding-left: 15px;
+      }
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 29px;
+    }
+
+    span {
+      display: block;
+      padding-bottom: 35px;
+      color: $c-white;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    p {
+      color: $c-white;
+    }
+  }
+}
+
+// HOLDINGS :: END
