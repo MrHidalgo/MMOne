@@ -14,6 +14,13 @@
     display: flex;
     flex-wrap: wrap;
 
+    &.is-show {
+      animation-fill-mode: both;
+      animation-duration: 1s;
+      animation-name: fadeInCustom;
+      display: flex !important;
+    }
+
     &-1 {
       display: none;
     }
@@ -67,6 +74,15 @@
         @include transition(background-color);
       }
     }
+  }
+}
+
+@keyframes fadeInCustom {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

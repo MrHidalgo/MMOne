@@ -41,8 +41,8 @@ $(document).ready((ev) => {
       $("[bullets-js]").removeClass("is-active");
       elem.addClass("is-active");
 
-      $(".clients__block").fadeOut(300);
-      $(".clients__block-" + elemId).fadeIn(300);
+      $(".clients__block").hide().removeClass("is-show");
+      $(".clients__block-" + elemId).addClass("is-show");
     });
   };
 
