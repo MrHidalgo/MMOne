@@ -1,0 +1,239 @@
+////
+/// @group  Mixin
+////
+
+/// 
+/// Mixin setting the width and height element.
+///
+/// @name   mixinDimensions
+///
+/// @param  {String}  $width             - The width property sets the width of an element.
+/// @param  {String}  $height  [$width]  - The height property sets the height of an element.
+///
+/// @see    $object
+///
+/// @example
+///   <selector> {
+///     @include mixinDimensions(100%);
+///     @include mixinDimensions(100%, 50%);
+///   }
+///
+@mixin dimensions($width, $height:$width) {
+	width: $width;
+	height: $height;
+}
+
+
+///
+/// Mixin generate animation. It uses an additional function :
+/// - **map-get()**   - returns the value in a map associated with the given key. If the map doesn’t have such a key, returns null;
+/// - **map-merge()** - Merges two maps together into a new map. Keys in $map2 will take precedence over keys in $map1;
+///
+/// @link http://sass-lang.com/documentation/Sass/Script/Functions.html#map_get-instance_method       map-get()
+/// @link http://sass-lang.com/documentation/Sass/Script/Functions.html#map_merge-instance_method     map-merge()
+///
+/// @name   mixinKeyframes
+///
+/// @param  {String}  $keyName - Animation Name
+/// @param  {Object}  $options
+///
+/// @example
+///   <selector> {
+///     @include moduleKeyframes(clockLeft,
+///       (
+///         opacityStart      : 0.8,
+///         opacityEnd        : 1,
+///         transformStart    : rotate(360deg)
+///       )
+///       ||
+///       (
+///         opacityStart      : 0.5,
+///         opacityEnd        : 1,
+///         transformDouble   : (rotate(-360deg) scale(0.5))
+///       )
+///     );
+///   }
+///
+@mixin keyframes($keyName, $options: ()) {
+	$configuration: map-merge((), $options);
+
+	@keyframes #{$keyName} {
+		from {
+			opacity: map-get($configuration, opacityStart);
+			transform: map-get($configuration, transformStart);
+		}
+		to {
+			opacity: map-get($configuration, opacityEnd);
+			transform: map-get($configuration, transformEnd);
+		}
+	}
+}
+
+
+///
+///
+///
+@mixin marginAuto {
+	margin: {
+		left: auto;
+		right: auto;
+	}
+}
+
+
+///
+///
+///
+@mixin inputPlaceholder {
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+}
+
+
+///
+///
+///
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+@mixin cssTriangle($color, $direction, $size: 6px, $position: absolute, $round: false){
+	@include pseudo($pos: $position);
+	width: 0;
+	height: 0;
+	@if ($round) {
+		border-radius: 3px;
+	}
+	@if ($direction == down) {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+		margin-top: 0 - round( $size / 2.5 );
+	} @else if ($direction == up) {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-bottom: $size solid $color;
+		margin-bottom: 0 - round( $size / 2.5 );
+	} @else if ($direction == right) {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-left: $size solid $color;
+		margin-right: -$size;
+	} @else if ($direction == left) {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-right: $size solid $color;
+		margin-left: -$size;
+	}
+}
+
+
+///
+/// Define vertical, horizontal, or both position
+///
+@mixin centered($prop: absolute, $position: both) {
+	position: $prop;
+
+	@if ($position == 'vertical') {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	@else if ($position == 'horizontal') {
+		left: 50%;
+		transform: translate(-50%);
+	}
+	@else if ($position == 'both') {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+
+///
+/// Mixin transition
+///
+/// @name			transition
+///
+/// @param  {String}  $rest... - CSS properties that are to be animated.
+///
+/// @see      $object
+///
+/// @example
+///   <selector> {
+///     @include transition([color | opacity | border | etc]);
+///   }
+///
+@mixin transition($rest...) {
+	$list: null;
+	$duration: null;
+	$idx: null;
+
+	@each $prop in ($rest) {
+		$idx: str_index(inspect($prop), "0.");
+
+		@if($idx == null) {
+			$duration: 0.3s;
+		}
+
+		$list: append($list, $prop $duration ease-in-out, comma);
+	}
+
+	transition: $list;
+}
+
+
+///
+/// Mixin media queries.
+///
+/// @name     respond
+///
+/// @param    {String}  $media [$text-mobile | $text-tablet | $text-small | $text-medium | $text-large] - Value that identifies one of the options and breakpoint.
+///
+/// @see      $object
+///
+/// @example
+///   <selector> {
+///     @include respond($text-mobile) { @content };
+///   }
+///   <selector> {
+///     @include respond($text-medium) { @content };
+///   }
+///
+$breakpointsMedia: (
+	extra-small     	: "(min-width: 320px)", 	/// extra-small
+	max-extra-small 	: "(max-width: 575px)",
+	small         		: "(min-width: 576px)", 	/// small
+	max-small     		: "(max-width: 767px)",
+	medium         		: "(min-width: 768px)", 	/// medium
+	max-medium     		: "(max-width: 991px)",
+	large         		: "(min-width: 992px)", 	/// large
+	max-large					: "(max-width: 1199px)",
+	extra-large     	: "(min-width: 1200px)",	/// extra-large
+	max-extra-large 	: "(max-width: 1365px)",
+	wide-small      	: "(min-width: 1366px)",	/// wide-small
+	max-wide-small 		: "(max-width: 1439px)",
+	wide-medium     	: "(min-width: 1440px)",	/// wide-medium
+	max-wide-medium 	: "(max-width: 1599px)",
+	wide-large      	: "(min-width: 1600px)",	/// wide-large
+	hd        				: "(min-width: 1920px)"
+) !default;
+
+@mixin respond($name) {
+	@if map-has-key($breakpointsMedia, $name) {
+		@media screen and #{inspect(map-get($breakpointsMedia, $name))} {
+			@content;
+		}
+	} @else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpointsMedia}`. Please make sure it is defined in `$breakpointsMedia` map.";
+	}
+}
+@mixin respondCustom($val) {
+	@media screen and #{$val} {
+		@content;
+	}
+}
