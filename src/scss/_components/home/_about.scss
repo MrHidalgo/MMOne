@@ -1,0 +1,49 @@
+// ABOUT :: START
+
+.about {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $c-eeeded;
+
+  &__block {
+    display: flex;
+    color: $c-black;
+
+    &-left,
+    &-right {
+      position: relative;
+      width: 50%;
+      padding-top: 56px;
+      padding-bottom: 13px;
+
+      img {
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &-left {
+      padding-left: 70px;
+    }
+
+    &-right {
+      padding-left: 85px;
+    }
+
+    &-title {
+      padding-bottom: 25px;
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    &-text {
+      width: 100%;
+      max-width: 486px;
+      line-height: 1.6;
+    }
+  }
+}
+
+// ABOUT :: END
