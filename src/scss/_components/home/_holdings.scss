@@ -1,8 +1,17 @@
 // HOLDINGS :: START
 
 .holdings {
-  position: relative;
-  min-height: 580px;
+  min-height: 700px;
+  height: calc(100vh - 68px);
+
+  &__row {
+    position: relative;
+    height: 50%;
+  }
+
+  .c-grid {
+    height: 100%;
+  }
 
   &__bg {
     z-index: 0;
@@ -48,10 +57,21 @@
   &__wrapper {
     z-index: 1;
     position: relative;
-
+    height: 100%;
 
     &-0 {
       display: flex;
+    }
+
+    &-1 {
+      display: flex;
+      align-items: center;
+    }
+
+    &-left,
+    &-right {
+      display: flex;
+      align-items: center;
     }
 
     &-left {
@@ -66,15 +86,15 @@
     display: block;
     width: 100%;
     max-width: 429px;
-    padding-top: 120px;
-    padding-bottom: 114px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 
     &-0 {
       margin-left: 100px;
 
       &:hover {
         span {
-          color: #f4c82c;
+          color: #fd0;
           @include transition(color);
         }
       }
@@ -97,7 +117,7 @@
 
       &:hover {
         span {
-          color: #f4c82c;
+          color: #f6cc40;
           @include transition(color);
         }
       }
@@ -120,12 +140,12 @@
       display: block;
       max-width: 100%;
       height: auto;
-      margin-bottom: 29px;
+      margin-bottom: 20px;
     }
 
     span {
       display: block;
-      padding-bottom: 35px;
+      padding-bottom: 25px;
       color: $c-white;
       font-size: 24px;
       font-weight: 500;

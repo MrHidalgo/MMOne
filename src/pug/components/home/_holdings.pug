@@ -14,25 +14,26 @@ mixin holdingsLinkBlock(linkUrl, classMod, imgName, linkVal, desc)
 
 
 section#holdings.holdings
-  .holdings__bg.holdings__bg-0
-    .holdings__bg-left
-    .holdings__bg-right
+  .holdings__row
+    .holdings__bg.holdings__bg-0
+      .holdings__bg-left
+      .holdings__bg-right
 
-  .c-grid
-    .holdings__wrapper.holdings__wrapper-0
-      .holdings__wrapper-left
-        +holdingsLinkBlock("https://www.shweproperty.com/", "0", "img-showProperty-logo", "shweproperty.com", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
+    .c-grid
+      .holdings__wrapper.holdings__wrapper-0
+        .holdings__wrapper-left
+          +holdingsLinkBlock("https://www.shweproperty.com/", "0", "img-showProperty-logo", "shweproperty.com", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
 
-      .holdings__wrapper-right
-        +holdingsLinkBlock("https://www.jobnet.com.mm/", "1", "img-jobNet-logo", "jobnet.com.mm", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
+        .holdings__wrapper-right
+          +holdingsLinkBlock("https://www.jobnet.com.mm/", "1", "img-jobNet-logo", "jobnet.com.mm", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
 
 
-section.holdings
-  .holdings__bg.holdings__bg-1
+  .holdings__row
+    .holdings__bg.holdings__bg-1
 
-  .c-grid
-    .holdings__wrapper.holdings__wrapper-1
-      +holdingsLinkBlock("https://www.myanmaremployerawards.com/", "2", "img-mea-logo", "myanmaremployerawards.com", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
+    .c-grid
+      .holdings__wrapper.holdings__wrapper-1
+        +holdingsLinkBlock("https://www.myanmaremployerawards.com/", "2", "img-mea-logo", "myanmaremployerawards.com", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
 
 
 // HOLDINGS :: END
