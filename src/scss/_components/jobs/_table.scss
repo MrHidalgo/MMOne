@@ -1,0 +1,35 @@
+// TABLE :: START
+
+.table {
+  padding-top: 80px;
+  padding-bottom: 120px;
+  background-color: $c-eeeded;
+
+  &__title {
+    padding-bottom: 61px;
+    text-transform: uppercase;
+  }
+
+  &__wrapper {
+    padding-bottom: 30px;
+
+    object {
+      background-color: $c-white;
+      box-shadow: 0 3px 4.7px 0.3px rgba(0, 0, 0, 0.24);
+    }
+  }
+
+  &__powered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $c-999;
+    font-size: 12px;
+
+    span {
+      margin-right: 10px;
+    }
+  }
+}
+
+// TABLE :: END

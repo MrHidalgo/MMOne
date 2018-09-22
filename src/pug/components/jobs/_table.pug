@@ -1,0 +1,22 @@
+// TABLE :: START
+
+section#table.table
+  .c-grid
+
+    h1.table__title.title!= "Open Positions"
+
+    .table__wrapper
+      #jobnet
+        object(data='https://www.jobnet.com.mm/embed/ig4IgZ38sOw%3d' frameborder ='0' width='100%' height ='750' scrolling ='yes' seamless='seamless' title='loading')
+          embed(data='https://www.jobnet.com.mm/embed/ig4IgZ38sOw%3d' frameborder ='0' width='100%' height ='750' scrolling ='yes' seamless='seamless' title='loading')
+
+    a(href="https://www.jobnet.com.mm/" target="_blank").table__powered
+      span!= "Powered by"
+      img(
+        srcset="./img/img-jobNer-color-logo.png, ./img/img-jobNer-color-logo@2x.png 2x"
+        alt="" title=""
+       )
+
+
+
+// TABLE :: END
