@@ -7,12 +7,15 @@
 const initSmoothScroll = (btnName = "[anchor-js]", animateSpeed = 1000) => {
 
   $(btnName).on("click", (e) => {
+    e.preventDefault();
 
     let linkHref = $(e.currentTarget).attr('href'),
       headerHeight = $(".header").outerHeight() || 0;
 
-    if(linkHref === "#" || !$(linkHref).length > 0) {
-      return true;
+    if(linkHref.indexOf(".html") !== -1) {
+      window.location.href = linkHref;
+    } else if (window.location.href.indexOf("jobs") !==  -1) {
+      window.location.href = "/";
     }
 
     let topHeightOffset = $(linkHref).offset().top - headerHeight;

@@ -1,0 +1,29 @@
+// MAIN :: START
+
+section#main.main
+  .c-grid
+
+    .main__block
+
+      if(contentClassName === "jobs")
+        p.main__block-title!= "We look for the best talent to grow together"
+        p.main__block-text!= "We are building the largest digital network in Myanmar, offering the greatest value and international standard service to deliver a live and up to date market place for Cars, Autos, Motors, Property, Real Estate, Job and Career opportunities, including the latest prices and salary levels."
+
+        a.main__btn.btn(
+          href="#"
+          title="" class=""
+        )!= "Open Positios"
+
+      else if (contentClassName === "home")
+        p.main__block-title!= "<span>A leading player</span> in Myanmar online classifieds industry"
+        p.main__block-text!= "MMOne Online Group is leading provider of digital classifieds in Myanmar, operated across property and employment verticals and provided to consumers and local partners in Myanmar through three primary brands: <a href='https://www.jobnet.com.mm/' target='_blank'>JobNet.com.mm</a>, <a href='https://www.shweproperty.com/' target='_blank'>ShweProperty.com</a> and <a href='https://www.myanmaremployerawards.com/' target='_blank'>MyanmarEmployerAwards.com.</a>"
+
+        a.main__btn.btn.anchor-js(
+          href="#about"
+          title="" class=""
+        )!= "About Us"
+
+
+        .main__info
+
+// MAIN :: END

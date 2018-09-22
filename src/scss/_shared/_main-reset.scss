@@ -2,6 +2,7 @@ html,
 body {
   width: 100vw;
   min-height: 100vh;
+  padding-top: 68px;
 
 
   &.is-hideScroll {
@@ -28,8 +29,6 @@ body {
   font-family: "GothamPro", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  padding-top: 68px;
 }
 
 

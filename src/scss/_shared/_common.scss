@@ -10,6 +10,28 @@
 // title :: end
 
 
+// btn
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 58px;
+  background-color: $c-009bed;
+  color: $c-white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  @include transition(background-color, color);
+
+  &:hover {
+    background-color: $c-white;
+    color: $c-009bed;
+    @include transition(background-color, color);
+  }
+}
+// btn :: end
+
+
 // copyright
 .copyright {
   p {
