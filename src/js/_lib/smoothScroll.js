@@ -14,7 +14,7 @@ const initSmoothScroll = (btnName = "[anchor-js]", animateSpeed = 1000) => {
 
     if(linkHref.indexOf(".html") !== -1) {
       window.location.href = linkHref;
-    } else if (window.location.href.indexOf("jobs") !==  -1) {
+    } else if (window.location.href.indexOf("jobs") !==  -1 && $(e.currentTarget).hasClass("nav__link")) {
       window.location.href = "/";
     }
 
