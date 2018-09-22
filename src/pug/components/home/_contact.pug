@@ -12,27 +12,27 @@ section#contact.contact
 
       form.form(action="" method="" autocomplete="off")
         .form__field.form__field--input
-          input(type="text" placeholder="Enter Your Full Name *")
+          input(type="text" placeholder="Enter Your Full Name *" name="contact_name")
 
         .form__field.form__field--input
-          input(type="text" placeholder="Email Address *")
+          input(type="text" placeholder="Email Address *" name="contact_address")
 
         .form__field.form__field--input
-          input(type="text" placeholder="Enter Your Phone Number *")
+          input(type="text" placeholder="Enter Your Phone Number *" name="contact_phone")
 
         .form__field.form__field--select
           .select
             span.select__value
-            select()
-              option(disabled)!= "What Is Your Query About?"
-              option()!= "What Is Your?"
-              option()!= "What Is Your Query?"
-              option()!= "What Is About?"
+            select(name="contact_select")
+              option(value="0" disabled selected hidden)!= "What Is Your Query About? *"
+              option(value="1")!= "What Is Your?"
+              option(value="2")!= "What Is Your Query?"
+              option(value="3")!= "What Is About?"
             span.select__icon-wrap
               i.select__icon.icon-png.dropdown
 
         .form__field.form__field--textarea
-          textarea(placeholder="Type Your Message *")
+          textarea(placeholder="Type Your Message *" name="contact_message")
 
         .form__field.form__field--btn
           button.btn.form__btn(type="submit")!= "Submit"

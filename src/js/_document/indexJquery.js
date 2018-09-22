@@ -53,7 +53,22 @@ $(document).ready((ev) => {
   /**
    *
    */
-  function initSelect(selector) {
+  const selectReset = (selector) => {
+    if (selector === undefined) {
+      var selector = 'select';
+    }
+
+    $(selector).each(function(){
+      var valOption = $(this).children('option:selected');
+
+      if(valOption.val() > 0) {
+        $(this).prev('span').addClass("is-choose");
+      }
+
+      $(this).prev('span').html(valOption.text());
+    });
+  };
+  const initSelect = (selector) => {
     if (selector === undefined) {
       var selector = 'select';
     }
@@ -63,18 +78,7 @@ $(document).ready((ev) => {
     $(selector).on('change', function () {
       selectReset(this);
     });
-  }
-
-  function selectReset(selector){
-    if (selector === undefined) {
-      var selector = 'select';
-    }
-
-    $(selector).each(function(){
-      var valOption = $(this).children('option:selected');
-      $(this).prev('span').html(valOption.text());
-    });
-  }
+  };
 
 
   /**
