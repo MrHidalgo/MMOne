@@ -1,0 +1,40 @@
+// CONTACT :: START
+
+section#contact.contact
+  .c-grid
+
+    h1.contact__title.title!= "Contact Us"
+
+    .contact__wrapper
+
+      p.contact__text!= "If you have a specific query regarding MMOne Online Group, please fill in the enquiry formand we will find the best person to help you."
+      p.contact__text!= "<span>*</span> Required"
+
+      form.form(action="" method="" autocomplete="off")
+        .form__field.form__field--input
+          input(type="text" placeholder="Enter Your Full Name *")
+
+        .form__field.form__field--input
+          input(type="text" placeholder="Email Address *")
+
+        .form__field.form__field--input
+          input(type="text" placeholder="Enter Your Phone Number *")
+
+        .form__field.form__field--select
+          .select
+            span.select__value
+            select()
+              option(disabled)!= "What Is Your Query About?"
+              option()!= "What Is Your?"
+              option()!= "What Is Your Query?"
+              option()!= "What Is About?"
+            span.select__icon-wrap
+              i.select__icon.icon-png.dropdown
+
+        .form__field.form__field--textarea
+          textarea(placeholder="Type Your Message *")
+
+        .form__field.form__field--btn
+          button.btn.form__btn(type="submit")!= "Submit"
+
+// CONTACT :: END

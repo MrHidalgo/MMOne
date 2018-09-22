@@ -12,24 +12,118 @@
 
 // btn
 .btn {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 58px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
   background-color: $c-009bed;
   color: $c-white;
   font-size: 20px;
   font-weight: bold;
   font-family: "Lato", sans-serif;
-  @include transition(background-color, color);
+  @include transition(border-color, background-color, color);
 
   &:hover {
     background-color: $c-white;
     color: $c-009bed;
-    @include transition(background-color, color);
+    @include transition(border-color, background-color, color);
   }
 }
 // btn :: end
+
+
+// form
+.form {
+  &__field {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+
+
+    &--input {
+      height: 48px;
+    }
+    &--select {
+      height: 48px;
+      background-color: $c-eeeded;
+
+      .select {
+        display: flex;
+        height: 100%;
+
+        &__value {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          max-width: calc(100% - 54px);
+          padding-left: 24px;
+          padding-right: 24px;
+          color: $c-999;
+          font-size: 14px;
+        }
+
+        &__icon {
+          &-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 54px;
+          }
+        }
+      }
+    }
+
+    input,
+    textarea,
+    select {
+      outline: none;
+      width: 100%;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      background-color: $c-eeeded;
+      font-size: 14px;
+      font-family: "GothamPro", sans-serif;
+      @include inputPlaceholder {
+        color: $c-999;
+      }
+    }
+    input,
+    select {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+    input {
+      padding: 0 24px;
+    }
+    textarea {
+      resize: none;
+      min-height: 153px;
+      padding: 20px 24px;
+    }
+    select {
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 429px;
+    border: 1px solid transparent;
+
+    &:hover {
+      border-color: $c-009bed;
+    }
+  }
+}
+// form :: end
 
 
 // copyright

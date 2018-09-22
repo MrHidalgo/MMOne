@@ -1,0 +1,36 @@
+// CONTACT :: START
+
+.contact {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  &__title {
+    padding-bottom: 55px;
+    text-transform: uppercase;
+  }
+
+  &__wrapper {
+    width: 100%;
+    max-width: 770px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__text {
+    font-size: 18px;
+
+    &:first-child {
+      padding-bottom: 10px;
+    }
+
+    &:last-of-type {
+      padding-bottom: 62px;
+    }
+
+    span {
+      color: $c-ff0303;
+    }
+  }
+}
+
+// CONTACT :: END

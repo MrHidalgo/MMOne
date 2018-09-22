@@ -33,6 +33,9 @@ $(document).ready((ev) => {
   };
 
 
+  /**
+   *
+   */
   const initClientsBullets = () => {
     $("[bullets-js]").on('click', (ev) => {
       const elem = $(ev.currentTarget),
@@ -48,6 +51,33 @@ $(document).ready((ev) => {
 
 
   /**
+   *
+   */
+  function initSelect(selector) {
+    if (selector === undefined) {
+      var selector = 'select';
+    }
+
+    selectReset(selector);
+
+    $(selector).on('change', function () {
+      selectReset(this);
+    });
+  }
+
+  function selectReset(selector){
+    if (selector === undefined) {
+      var selector = 'select';
+    }
+
+    $(selector).each(function(){
+      var valOption = $(this).children('option:selected');
+      $(this).prev('span').html(valOption.text());
+    });
+  }
+
+
+  /**
    * @description Init all method
    */
   const initJquery = () => {
@@ -59,6 +89,7 @@ $(document).ready((ev) => {
     initChangeActiveClass("[lang-js]");
     initChangeActiveClass("[nav-js]");
     initClientsBullets();
+    initSelect();
   };
   initJquery();
 });
