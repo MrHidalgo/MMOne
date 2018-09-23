@@ -25,5 +25,47 @@ section#main.main
 
 
         .main__info
+          .main__info-extra
+            .main__info-box.main__info-box-0(data-hover="0")
+              p.main__info-title!= "ShweProperty.com"
+            .main__info-box.main__info-box-1(data-hover="1")
+              p.main__info-title!= "JobNet.com.mm"
+            .main__info-box.main__info-box-2(data-hover="2")
+              p.main__info-title!= "MyanmarEmployerAwards.com"
+
+          .main__info-wrap
+            a(href="https://www.shweproperty.com/" target="_blank").main__info-block.main__info-block-0
+              p.main__info-title!= "ShweProperty.com"
+              .main__info-cover
+                .main__info-img
+                  img(
+                    srcset="./img/sp_logo.png"
+                    alt="" title=""
+                   )
+                .main__info-text
+                  p!= "Lorem ipsum dolor sit amet, consectetur adipiscing eltit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet."
+
+            a(href="https://www.jobnet.com.mm/" target="_blank").main__info-block.main__info-block-1
+              p.main__info-title!= "JobNet.com.mm"
+              .main__info-cover
+                .main__info-img
+                  img(
+                    srcset="./img/jn_logo.png"
+                    alt="" title=""
+                  )
+                .main__info-text
+                  p!= "Lorem ipsum dolor sit amet, consectetur adipiscing eltit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet."
+
+
+            a(href="https://www.myanmaremployerawards.com/" target="_blank").main__info-block.main__info-block-2
+              p.main__info-title!= "MyanmarEmployerAwards.com"
+              .main__info-cover
+                .main__info-img
+                  img(
+                    srcset="./img/mea_logo.png"
+                    alt="" title=""
+                  )
+                .main__info-text
+                  p!= "Lorem ipsum dolor sit amet, consectetur adipiscing eltit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet."
 
 // MAIN :: END
