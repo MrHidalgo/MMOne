@@ -1,0 +1,89 @@
+// INVESTORS :: START
+
+section#investors.investors
+  .investors__bg
+    .investors__bg-left
+    .investors__bg-right
+
+  .c-grid
+    .investors__wrapper
+      .investors__wrapper-left
+        p.investors__title!= "MMOne Online Group Business Description:"
+        p.investors__text!= "MMOne Online Group is leading provider of digital classifieds in Myanmar, operated across property and employment verticals and provided to consumers and local partners in Myanmar through three primary brands: JobNet.com.mm, ShweProperty.com and MyanmarEmployerAwards.com."
+
+        .investors__collapse-wrap
+          .investors__collapse.investors__collapse-0(collapse-js)
+            .investors__collapse-head(collapse-head-js)
+              p.investors__collapse-title!= "Foundation Year"
+              i.icon-png.dropdown
+            .investors__collapse-body(collapse-body-js)
+              p!= "2014"
+            .investors__collapse-line
+
+          .investors__collapse.investors__collapse-1(collapse-js)
+            .investors__collapse-head(collapse-head-js)
+              p.investors__collapse-title!= "Founder & CEO"
+              i.icon-png.dropdown
+            .investors__collapse-body(collapse-body-js)
+              h3!= "Justin Anton Sway"
+              p!= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+            .investors__collapse-line
+
+          .investors__collapse.investors__collapse-2(collapse-js)
+            .investors__collapse-head(collapse-head-js)
+              p.investors__collapse-title!= "Headquarter"
+              i.icon-png.dropdown
+            .investors__collapse-body(collapse-body-js)
+              p!= "No.99, Room No.5 (C+D), 99 Condo, <br>Dhammazadi Road, Kamaryut Township, <br>Yangon Myanmar"
+              a(
+                href="tel:01-502 077"
+                title="" class=""
+              )!= "01-502 077 "
+              a(
+                href="tel:09 977 285 887"
+                title="" class=""
+              )!= " 09 977 285 887"
+              a(
+                href="mailto:info@MMOne.com.mm"
+                title="" class=""
+              )!= "info@MMOne.com.mm"
+
+            .investors__collapse-line
+
+          .investors__collapse.investors__collapse-3(collapse-js)
+            .investors__collapse-head(collapse-head-js)
+              p.investors__collapse-title!= "Auditor"
+              i.icon-png.dropdown
+            .investors__collapse-body(collapse-body-js)
+              p!= "Deloitte Myanmar <br>53 Strand Road, Strand Square, Level 4, #411, Pabedan Township, Yangon, Myanmar <br>(Burma)"
+            .investors__collapse-line
+
+          .investors__collapse.investors__collapse-4(collapse-js)
+            .investors__collapse-head(collapse-head-js)
+              p.investors__collapse-title!= "Main KPIs (as of September 1st, 2018)"
+              i.icon-png.dropdown
+            .investors__collapse-body(collapse-body-js)
+              ul
+                li!= "Visits: 75,588,928"
+                li!= "Clickouts: 93,909,814"
+                li!= "Listings: 344,292,899"
+            .investors__collapse-line
+
+      .investors__wrapper-right
+        p.investors__title!= "Investors Contacts"
+        p.investors__text!= "For investment inquiries please reach out at <a href='mailto:investors@mmone.com.mm'>investors@mmone.com.mm</a> or via form below:"
+
+        form.form(action="" method="" autocomplete="off")
+          .form__field.form__field--input
+            input(type="text" placeholder="Email *" name="investors_name")
+
+          .form__field.form__field--input
+            input(type="text" placeholder="Full Name *" name="investors_address")
+
+          .form__field.form__field--textarea
+            textarea(placeholder="Comments" name="investors_message")
+
+          .form__field.form__field--btn
+            button.btn.form__btn(type="submit")!= "Submit"
+
+// INVESTORS :: END

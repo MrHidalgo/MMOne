@@ -82,6 +82,22 @@ $(document).ready((ev) => {
 
 
   /**
+   *
+   */
+  const initCollapse = () => {
+    $("[collapse-head-js]").on('click', (ev) => {
+      ev.preventDefault();
+
+      const elem = $(ev.currentTarget),
+        parentElem = elem.closest("[collapse-js]");
+
+      elem.toggleClass("is-active");
+      parentElem.find("[collapse-body-js]").slideToggle(300);
+    });
+  };
+
+
+  /**
    * @description Init all method
    */
   const initJquery = () => {
@@ -94,6 +110,7 @@ $(document).ready((ev) => {
     initChangeActiveClass("[nav-js]");
     initClientsBullets();
     initSelect();
+    initCollapse();
   };
   initJquery();
 });
