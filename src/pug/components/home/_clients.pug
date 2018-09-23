@@ -1,7 +1,7 @@
 // CLIENTS :: START
 
-mixin clientsImage(imgName)
-  .clients__block-img
+mixin clientsImage(classMod, imgName)
+  .clients__block-img(class!= "clients__block-img--" + classMod)
     img(
       srcset="./img/" + imgName + ".png, ./img/" + imgName + "@2x.png 2x"
       alt="" title=""
@@ -15,32 +15,32 @@ section#clients.clients
 
     .clients__block-wrapper
       .clients__block.clients__block-0
-        +clientsImage("img-clients-0")
-        +clientsImage("img-clients-1")
-        +clientsImage("img-clients-2")
-        +clientsImage("img-clients-3")
-        +clientsImage("img-clients-4")
-        +clientsImage("img-clients-5")
-        +clientsImage("img-clients-0")
-        +clientsImage("img-clients-1")
-        +clientsImage("img-clients-2")
-        +clientsImage("img-clients-3")
-        +clientsImage("img-clients-4")
-        +clientsImage("img-clients-5")
+        +clientsImage("mpt", "img-clients-0")
+        +clientsImage("unilever", "img-clients-1")
+        +clientsImage("ananda", "img-clients-2")
+        +clientsImage("kbz", "img-clients-3")
+        +clientsImage("ooredoo", "img-clients-4")
+        +clientsImage("cdsg", "img-clients-5")
+        +clientsImage("mpt", "img-clients-0")
+        +clientsImage("unilever", "img-clients-1")
+        +clientsImage("ananda", "img-clients-2")
+        +clientsImage("kbz", "img-clients-3")
+        +clientsImage("ooredoo", "img-clients-4")
+        +clientsImage("cdsg", "img-clients-5")
 
       .clients__block.clients__block-1
-        +clientsImage("img-clients-5")
-        +clientsImage("img-clients-4")
-        +clientsImage("img-clients-3")
-        +clientsImage("img-clients-2")
-        +clientsImage("img-clients-1")
-        +clientsImage("img-clients-0")
-        +clientsImage("img-clients-5")
-        +clientsImage("img-clients-4")
-        +clientsImage("img-clients-3")
-        +clientsImage("img-clients-2")
-        +clientsImage("img-clients-1")
-        +clientsImage("img-clients-0")
+        +clientsImage("cdsg", "img-clients-5")
+        +clientsImage("ooredoo", "img-clients-4")
+        +clientsImage("kbz", "img-clients-3")
+        +clientsImage("ananda", "img-clients-2")
+        +clientsImage("unilever", "img-clients-1")
+        +clientsImage("mpt", "img-clients-0")
+        +clientsImage("cdsg", "img-clients-5")
+        +clientsImage("ooredoo", "img-clients-4")
+        +clientsImage("kbz", "img-clients-3")
+        +clientsImage("ananda", "img-clients-2")
+        +clientsImage("unilever", "img-clients-1")
+        +clientsImage("", "img-clients-0")
 
     .clients__bullets
       a.is-active(

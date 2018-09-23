@@ -44,8 +44,38 @@
         @include transition(filter);
       }
 
+      &--mpt {
+        &:hover {
+          background-color: #ffcb00;
+        }
+      }
+      &--unilever {
+        &:hover {
+          background-color: #3534b2;
+        }
+      }
+      &--ananda {
+        &:hover {
+          background-color: $c-8eca41;
+        }
+      }
+      &--kbz {
+        &:hover {
+          background-color: #1300b2;
+        }
+      }
+      &--ooredoo {
+        &:hover {
+          background-color: #ff0006;
+        }
+      }
+      &--cdsg {
+        &:hover {
+          background-color: #383837;
+        }
+      }
+
       &:hover {
-        background-color: $c-8eca41;
         @include transition(background-color);
 
         img {
