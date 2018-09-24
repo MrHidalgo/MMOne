@@ -91,8 +91,17 @@ $(document).ready((ev) => {
       const elem = $(ev.currentTarget),
         parentElem = elem.closest("[collapse-js]");
 
-      elem.toggleClass("is-active");
-      parentElem.find("[collapse-body-js]").slideToggle(300);
+
+      if(elem.hasClass("is-active")) {
+        elem.removeClass("is-active");
+        parentElem.find("[collapse-body-js]").slideUp(300);
+      } else {
+        $("[collapse-head-js]").removeClass("is-active");
+        $("[collapse-body-js]").slideUp(300);
+
+        elem.addClass("is-active");
+        parentElem.find("[collapse-body-js]").slideDown(300);
+      }
     });
   };
 
