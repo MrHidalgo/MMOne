@@ -79,9 +79,15 @@
 
     &-left {
       width: 55%;
+      @include respond(max-medium) {
+        width: 50%;
+      }
     }
     &-right {
       width: 45%;
+      @include respond(max-medium) {
+        width: 50%;
+      }
     }
   }
 
@@ -94,6 +100,9 @@
 
     &-0 {
       margin-left: 100px;
+      @include respond(max-medium) {
+        margin-left: 15px;
+      }
 
       &:hover {
         span {
