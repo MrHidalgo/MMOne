@@ -10,7 +10,10 @@ header#header.header
 
         .header__line.header__line-0
 
-      .header--mobile
+        .header--hamburger
+          include ../macros/_hamburger
+
+      .header--mobile(mobile-block-js)
         .header__wrapper-middle
           include ../macros/_nav
 

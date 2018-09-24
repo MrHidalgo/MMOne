@@ -161,6 +161,7 @@ $(document).ready((ev) => {
     initPreventBehavior();
     // lib
     initSmoothScroll(".anchor-js");
+    initHamburger();
     // callback
     initChangeActiveClass("[lang-js]");
     initChangeActiveClass("[nav-js]");

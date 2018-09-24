@@ -24,6 +24,9 @@ const initSmoothScroll = (btnName = "[anchor-js]", animateSpeed = 1000) => {
       scrollTop: topHeightOffset
     }, animateSpeed);
 
+    $("html, body").removeClass("is-hideScroll");
+    $("[hamburger-js]").removeClass("is-active");
+    $("[mobile-block-js]").removeClass("is-open");
   });
 
 };
