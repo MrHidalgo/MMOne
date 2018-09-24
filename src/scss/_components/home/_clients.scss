@@ -3,6 +3,18 @@
 .clients {
   padding-top: 120px;
   padding-bottom: 80px;
+  @include respond(max-wide-medium) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include respond(max-extra-large) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include respond(max-medium) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
   .c-grid-fluid {
     padding-left: 0;
@@ -29,6 +41,18 @@
       position: relative;
       padding-top: 60px;
       padding-bottom: 60px;
+      @include respond(max-wide-medium) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+      @include respond(max-extra-large) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      @include respond(max-medium) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
     }
 
     &-img {
@@ -38,9 +62,23 @@
       justify-content: center;
       width: calc(100% / 6);
       height: 320px;
+      padding-left: 30px;
+      padding-right: 30px;
       @include transition(background-color);
+      @include respond(max-wide-medium) {
+        height: 250px;
+      }
+      @include respond(max-extra-large) {
+        height: 220px;
+      }
+      @include respond(max-medium) {
+        height: 150px;
+      }
 
       img {
+        display: block;
+        max-width: 100%;
+        height: auto;
         @include transition(filter);
       }
 
