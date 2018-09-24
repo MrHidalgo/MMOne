@@ -23,6 +23,20 @@ $paddingRight: $paddingLeft;
     max-width: $maxWidth;
   }
 
+  // del for production
+  @media screen and (min-width: 576px) {
+    max-width: $maxWidth;
+  }
+  @media screen and (min-width: 992px) {
+    max-width: $maxWidth;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: $maxWidth;
+  }
+  @media screen and (min-width: 1366px) {
+    max-width: $maxWidth;
+  }
+
 
   &-fluid {
     @extend %grid;

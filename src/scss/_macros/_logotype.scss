@@ -30,6 +30,9 @@
     font-size: 20px;
     font-family: "Lato", sans-serif;
     @include transition(color);
+    @include respond(max-small) {
+      justify-content: center;
+    }
 
     span {
       font-weight: 700;

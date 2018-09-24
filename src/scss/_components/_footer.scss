@@ -7,14 +7,53 @@
     display: flex;
     min-height: 281px;
     padding-top: 80px;
+    @include respond(max-medium) {
+      padding-top: 60px;
+    }
+    @include respond(max-small) {
+      flex-wrap: wrap;
+      padding-bottom: 60px;
+    }
 
     &-left {
       width: 553px;
       min-width: 200px;
+      @include respond(max-large) {
+        width: 40%;
+      }
+      @include respond(max-small) {
+        width: 100%;
+        text-align: center;
+      }
     }
+
     &-right {
+      position: relative;
       width: 100%;
       max-width: calc(100% - 553px);
+      @include respond(max-large) {
+        max-width: 60%;
+      }
+      @include respond(max-small) {
+        max-width: 100%;
+      }
+
+      img {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        max-width: 100%;
+        height: auto;
+        @include respond(max-medium) {
+          position: static;
+          margin-top: 15px;
+        }
+        @include respond(max-small) {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
     }
   }
 }

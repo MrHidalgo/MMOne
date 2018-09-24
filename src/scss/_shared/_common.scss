@@ -135,6 +135,9 @@
   p {
     color: $c-white;
     font-size: 11px;
+    @include respond(max-small) {
+      padding-bottom: 61px;
+    }
   }
 }
 // copyright :: end
@@ -143,6 +146,9 @@
 // address
 .address {
   color: $c-white;
+  @include respond(max-small) {
+    padding-bottom: 61px;
+  }
 
   &__text {
     padding-bottom: 20px;
