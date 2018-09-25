@@ -111,29 +111,24 @@ $(document).ready((ev) => {
    */
   const initMainInfoAnimation = () => {
     const mainInfo = $(".main__info"),
-      mainCoverContainer = $(".main__info-extra, .main__info-wrap"),
-      infoAdditionalContainer = $(".main__info-extra"),
       infoBox = $(".main__info-box"),
       infoBlock = $(".main__info-block");
 
-    mainCoverContainer.hover(
-      (ev) => {
-        infoAdditionalContainer.stop(true, false).delay(0).addClass("is-hover");
-      }
-    );
     infoBox.hover(
       (ev) => {
         const elem = $(ev.currentTarget),
           elemId = elem.data("hover"),
           infoBlock = $(".main__info-block").eq(elemId);
 
+        if(is_touch_device()) {
+          $(".main__info-box").removeClass("is-hide");
+          $(".main__info-block").removeClass("is-show");
+        }
+
         elem.addClass("is-hide");
         infoBlock.stop(true, false).delay(0).addClass("is-show");
       }
     );
-    mainCoverContainer.on("mouseleave", () => {
-      infoAdditionalContainer.removeClass("is-hover");
-    });
     infoBlock.on("mouseleave", (ev) => {
       infoBox.removeClass("is-hide");
       $(ev.currentTarget).removeClass("is-show");
@@ -141,16 +136,31 @@ $(document).ready((ev) => {
 
     // after load/ready page
     // ===============
-    if(localStorage.getItem("animation") !== "1") {
-      setTimeout((ev) => {
-        mainInfo.addClass("is-start-animation");
-      }, 1750);
-      setTimeout((ev) => {
-        mainInfo.removeClass("is-start-animation");
-        localStorage.setItem('animation', "1");
-      }, 3150);
+    setTimeout((ev) => {
+      mainInfo.addClass("is-start-animation");
+    }, 1550);
+    setTimeout((ev) => {
+      mainInfo.removeClass("is-start-animation");
+      infoBox.addClass("is-default");
+    }, 3250);
+
+    function is_touch_device() {
+      return 'ontouchstart' in window;
     }
   };
+
+
+  /**
+   *
+   */
+  $('body').on('click', function (e) {
+    const className = ".main__info";
+
+    if (!$(e.target).closest(className).length) {
+      $(".main__info-box").removeClass("is-hide");
+      $(".main__info-block").removeClass("is-show");
+    }
+  });
 
 
   /**

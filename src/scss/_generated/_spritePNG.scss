@@ -1,11 +1,20 @@
 $sprite: (
+  bkng_arrow: (
+    offset-x: 0px,
+    offset-y: -25px,
+    width: 11px,
+    height: 10px,
+    total-width: 39px,
+    total-height: 35px,
+    image: '../img/sprite.png'
+  ),
   dropdown: (
     offset-x: -25px,
     offset-y: 0px,
     width: 14px,
     height: 12px,
     total-width: 39px,
-    total-height: 20px,
+    total-height: 35px,
     image: '../img/sprite.png'
   ),
   i-lang: (
@@ -14,7 +23,7 @@ $sprite: (
     width: 20px,
     height: 20px,
     total-width: 39px,
-    total-height: 20px,
+    total-height: 35px,
     image: '../img/sprite.png'
   ),
 );
@@ -62,6 +71,9 @@ $sprite: (
   }
 }
 
+.bkng_arrow:before {
+  @include sprite(bkng_arrow);
+}
 .dropdown:before {
   @include sprite(dropdown);
 }

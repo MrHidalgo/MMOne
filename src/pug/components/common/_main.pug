@@ -24,48 +24,65 @@ section#main.main
         )!= "About Us"
 
 
-        .main__info
-          .main__info-extra
-            .main__info-box.main__info-box-0(data-hover="0")
-              p.main__info-title!= "ShweProperty.com"
-            .main__info-box.main__info-box-1(data-hover="1")
-              p.main__info-title!= "JobNet.com.mm"
-            .main__info-box.main__info-box-2(data-hover="2")
-              p.main__info-title!= "MyanmarEmployerAwards.com"
+    .main__info
+      .main__info-extra
+        .main__info-box.main__info-box-0(data-hover="0")
+          img(
+            srcset="./img/img-showProperty-logo.png, ./img/img-showProperty-logo@2x.png 2x"
+            alt="" title=""
+           )
+        .main__info-box.main__info-box-1(data-hover="1")
+          img(
+            srcset="./img/img-jobNet-logo.png, ./img/img-jobNet-logo@2x.png 2x"
+            alt="" title=""
+          )
+        .main__info-box.main__info-box-2(data-hover="2")
+          img(
+            srcset="./img/img-mea-logo.png, ./img/img-mea-logo@2x.png 2x"
+            alt="" title=""
+            height="53px"
+          )
 
-          .main__info-wrap
-            a(href="https://www.shweproperty.com/" target="_blank").main__info-block.main__info-block-0
-              p.main__info-title!= "ShweProperty.com"
-              .main__info-cover
-                .main__info-img
-                  img(
-                    srcset="./img/sp_logo.png"
-                    alt="" title=""
-                   )
-                .main__info-text
-                  p!= "Lorem ipsum dolor sit amet, consectetur adipiscing eltit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet."
+      .main__info-wrap
+        a(href="https://www.shweproperty.com/" target="_blank").main__info-block.main__info-block-0
+          .main__info-cover
+            .main__info-img
+              img(
+                srcset="./img/sp_logo.png"
+                alt="" title=""
+               )
+            p.main__info-title!= "ShweProperty.com"
+            .main__info-text
+              p!= "Lorem ipsum dolor sit amet, consectetur adipiscing eltit, sed do eiusmod tempor."
 
-            a(href="https://www.jobnet.com.mm/" target="_blank").main__info-block.main__info-block-1
-              p.main__info-title!= "JobNet.com.mm"
-              .main__info-cover
-                .main__info-img
-                  img(
-                    srcset="./img/jn_logo.png"
-                    alt="" title=""
-                  )
-                .main__info-text
-                  p!= "Lorem ipsum dolor sit amet, consectetur adipiscing eltit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet."
+            i.icon-png.bkng_arrow
 
 
-            a(href="https://www.myanmaremployerawards.com/" target="_blank").main__info-block.main__info-block-2
-              p.main__info-title!= "MyanmarEmployerAwards.com"
-              .main__info-cover
-                .main__info-img
-                  img(
-                    srcset="./img/mea_logo.png"
-                    alt="" title=""
-                  )
-                .main__info-text
-                  p!= "Lorem ipsum dolor sit amet, consectetur adipiscing eltit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet."
+        a(href="https://www.jobnet.com.mm/" target="_blank").main__info-block.main__info-block-1
+          .main__info-cover
+            .main__info-img
+              img(
+                srcset="./img/jn_logo.png"
+                alt="" title=""
+              )
+            p.main__info-title!= "JobNet.com.mm"
+            .main__info-text
+              p!= "Lorem ipsum dolor sit amet, consectetur adipiscing eltit, sed do eiusmod tempor."
+
+            i.icon-png.bkng_arrow
+
+
+        a(href="https://www.myanmaremployerawards.com/" target="_blank").main__info-block.main__info-block-2
+          .main__info-cover
+            .main__info-img
+              img(
+                srcset="./img/mea_logo.png"
+                alt="" title=""
+              )
+            p.main__info-title!= "MyanmarEmployerAwards.com"
+            .main__info-text
+              p!= "Lorem ipsum dolor sit amet, consectetur adipiscing eltit, sed do eiusmod tempor."
+
+            i.icon-png.bkng_arrow
 
 // MAIN :: END
