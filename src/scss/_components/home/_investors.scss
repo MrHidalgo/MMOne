@@ -105,6 +105,15 @@
         transform: translateY(-50%);
         @include transition(opacity);
       }
+
+      span {
+        font-size: 14px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        line-height: 1;
+      }
     }
 
     &-body {

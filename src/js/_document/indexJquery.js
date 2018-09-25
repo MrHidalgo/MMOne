@@ -138,11 +138,11 @@ $(document).ready((ev) => {
     // ===============
     setTimeout((ev) => {
       mainInfo.addClass("is-start-animation");
-    }, 1550);
+    }, 1400);
     setTimeout((ev) => {
       mainInfo.removeClass("is-start-animation");
       infoBox.addClass("is-default");
-    }, 3250);
+    }, 4000);
 
     function is_touch_device() {
       return 'ontouchstart' in window;
