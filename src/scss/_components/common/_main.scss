@@ -16,6 +16,11 @@
   @include respondCustom((max-height:900px)) {
     padding-top: 30px;
   }
+  @include respond(max-small) {
+    height: auto;
+    min-height: 575px;
+    padding-top: 15px;
+  }
 
   &__block {
     width: 100%;
@@ -41,6 +46,9 @@
       padding: 30px;
       margin-right: 0;
     }
+    @include respond(max-small) {
+      padding: 15px;
+    }
 
     .home & {
       @include respond(wide-large) {
@@ -56,11 +64,17 @@
       color: $c-white;
       font-size: 30px;
       font-weight: 500;
+      @include respond(max-small) {
+        font-size: 17px;
+      }
 
       span {
         display: block;
         text-transform: uppercase;
         font-weight: 900;
+        @include respond(max-small) {
+          font-size: 20px;
+        }
       }
     }
 
@@ -73,6 +87,9 @@
       }
       @include respondCustom((max-height:900px)) {
         padding-bottom: 30px;
+      }
+      @include respond(max-small) {
+        font-size: 14px;
       }
 
       a {

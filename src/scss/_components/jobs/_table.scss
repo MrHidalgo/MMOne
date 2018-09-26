@@ -4,10 +4,17 @@
   padding-top: 80px;
   padding-bottom: 120px;
   background-color: $c-eeeded;
+  @include respond(max-extra-small) {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
 
   &__title {
     padding-bottom: 61px;
     text-transform: uppercase;
+    @include respond(max-extra-small) {
+      padding-bottom: 30px;
+    }
   }
 
   &__wrapper {
