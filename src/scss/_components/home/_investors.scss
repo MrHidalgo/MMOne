@@ -4,6 +4,11 @@
   position: relative;
   padding-top: 80px;
   padding-bottom: 80px;
+  @include respond(max-small) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: $c-eeeded;
+  }
 
   &__bg {
     z-index: 0;
@@ -13,6 +18,9 @@
     left: 0;
     width: 100%;
     height: 100%;
+    @include respond(max-small) {
+      display: none;
+    }
 
     &-left {
       width: calc(50% + 85px);
@@ -28,10 +36,18 @@
     z-index: 1;
     position: relative;
     display: flex;
+    @include respond(max-small) {
+      flex-wrap: wrap;
+    }
 
     &-left {
       width: calc(50% + 85px);
       padding-right: 85px;
+      @include respond(max-small) {
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 30px;
+      }
 
       .investors__text {
         color: $c-666;
@@ -43,6 +59,13 @@
       padding-left: 70px;
       @include respond(max-extra-large) {
         padding-left: 15px;
+      }
+      @include respond(max-small) {
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        margin-right: -15px;
+        padding: 40px 15px;
+        background-color: $c-1d4e89;
       }
 
       p {
