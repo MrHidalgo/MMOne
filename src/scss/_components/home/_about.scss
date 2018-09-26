@@ -4,10 +4,17 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $c-eeeded;
+  @include respond(max-extra-small) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
   &__block {
     display: flex;
     color: $c-black;
+    @include respond(max-extra-small) {
+      flex-wrap: wrap;
+    }
 
     &-left,
     &-right {
@@ -15,33 +22,54 @@
       width: 50%;
       padding-top: 56px;
       padding-bottom: 13px;
+      @include respond(max-extra-small) {
+        width: 100%;
+        padding-bottom: 50px;
+      }
 
       img {
         z-index: 0;
         position: absolute;
         top: 0;
         left: 0;
+        @include respond(max-extra-small) {
+          left: -25%;
+        }
       }
     }
 
     &-left {
       padding-left: 70px;
+      @include respond(max-extra-small) {
+        padding-left: 0;
+      }
     }
 
     &-right {
       padding-left: 85px;
+      @include respond(max-extra-small) {
+        padding-left: 0;
+        padding-bottom: 40px;
+      }
     }
 
     &-title {
       padding-bottom: 25px;
       font-size: 22px;
       font-weight: 500;
+      @include respond(max-extra-small) {
+        font-size: 20px;
+      }
     }
 
     &-text {
       width: 100%;
       max-width: 486px;
       line-height: 1.6;
+      @include respond(max-extra-small) {
+        max-width: 100%;
+        font-size: 14px;
+      }
     }
   }
 }
