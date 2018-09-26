@@ -15,6 +15,10 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
+  @include respond(max-small) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
   .c-grid-fluid {
     padding-left: 0;
@@ -74,6 +78,13 @@
       @include respond(max-medium) {
         height: 150px;
       }
+      @include respond(max-small) {
+        width: calc(100% / 3);
+      }
+      @include respond(max-extra-small) {
+        width: calc(100% / 2);
+      }
+
 
       img {
         display: block;
