@@ -152,7 +152,7 @@
 
       &.is-default {
         transform: translateY(0) !important;
-        @include transition(transform);
+        @include transition(transform 0.55s);
       }
       &.is-hide {
         transform: translateY(70px) !important;
@@ -185,7 +185,7 @@
       padding: 30px 15px;
       transform: translateY(100%);
       background-color: rgba($c-black, 0.6);
-      @include transition(transform);
+      @include transition(transform 0.75s);
 
       &:after {
         content: "";

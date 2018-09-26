@@ -39,6 +39,9 @@
 
   &__text {
     font-size: 18px;
+    @include respond(max-small) {
+      font-size: 16px;
+    }
 
     &:first-child {
       padding-bottom: 10px;
@@ -54,6 +57,9 @@
       }
       @include respond(max-medium) {
         padding-bottom: 30px;
+      }
+      @include respond(max-small) {
+        font-size: 14px;
       }
     }
 
