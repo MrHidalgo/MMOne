@@ -33,7 +33,6 @@
     @include respond(max-wide-small) {
       z-index: 1;
       position: relative;
-      max-width: 100%;
       min-height: auto;
       padding: 30px;
       margin-right: 0;
@@ -41,12 +40,12 @@
     @include respondCustom((max-height:900px)) {
       z-index: 1;
       position: relative;
-      max-width: 100%;
       min-height: auto;
       padding: 30px;
       margin-right: 0;
     }
     @include respond(max-small) {
+      max-width: 100%;
       padding: 15px !important;
     }
 

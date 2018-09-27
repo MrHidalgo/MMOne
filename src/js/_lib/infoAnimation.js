@@ -22,7 +22,7 @@ const initMainInfoAnimation = (countVal) => {
           elemId = elem.data("hover"),
           infoBlock = $(".main__info-block").eq(elemId);
 
-        if(is_touch_device()) {
+        if (is_touch_device()) {
           $(".main__info-box").removeClass("is-hide");
           $(".main__info-block").removeClass("is-show");
         }
