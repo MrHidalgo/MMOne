@@ -25,6 +25,19 @@ section#main.main
 
 
     .main__info
+      a(
+        href="#"
+        title="" class="main__info-btn main__info-btn--left"
+        slider-left-js
+      )
+        i.icon-png.arrow-slider
+      a(
+        href="#"
+        title="" class="main__info-btn main__info-btn--right"
+        slider-right-js
+      )
+        i.icon-png.arrow-slider
+
       .main__info-extra
         .main__info-box.main__info-box-0(data-hover="0")
           img(
@@ -53,6 +66,10 @@ section#main.main
                )
             p.main__info-title!= "ShweProperty.com"
             .main__info-text
+              img(
+                srcset="./img/img-mainInfo-logo-1-1.png, ./img/img-mainInfo-logo-1-1@2x.png 2x"
+                alt="" title=""
+              )
               p!= "Lorem ipsum dolor sit amet, consectetur adipiscing eltit, sed do eiusmod tempor."
 
             i.icon-png.bkng_arrow
@@ -67,6 +84,10 @@ section#main.main
               )
             p.main__info-title!= "JobNet.com.mm"
             .main__info-text
+              img(
+                srcset="./img/img-mainInfo-logo-2-2.png, ./img/img-mainInfo-logo-2-2@2x.png 2x"
+                alt="" title=""
+              )
               p!= "Lorem ipsum dolor sit amet, consectetur adipiscing eltit, sed do eiusmod tempor."
 
             i.icon-png.bkng_arrow
@@ -81,6 +102,10 @@ section#main.main
               )
             p.main__info-title!= "MyanmarEmployerAwards.com"
             .main__info-text
+              img(
+                srcset="./img/img-mainInfo-logo-0-0.png, ./img/img-mainInfo-logo-0-0@2x.png 2x"
+                alt="" title=""
+              )
               p!= "Lorem ipsum dolor sit amet, consectetur adipiscing eltit, sed do eiusmod tempor."
 
             i.icon-png.bkng_arrow

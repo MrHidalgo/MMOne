@@ -81,6 +81,9 @@
 
       &.is-open {
         display: flex;
+        animation-fill-mode: both;
+        animation-duration: 0.45s;
+        animation-name: zoomIn;
       }
     }
   }

@@ -44,6 +44,52 @@ const initMainInfoAnimation = () => {
       return 'ontouchstart' in window;
     }
   } else {
+    const sliderBtnLeft = $("[slider-left-js]"),
+      sliderBtnRight = $("[slider-right-js]");
 
+    let blockSlider = $(".main__info-block"),
+      countBlockSlider = blockSlider.length,
+      mainCount = 1;
+
+    sliderBtnLeft.on('click', (ev) => {
+      const elem = $(ev.currentTarget);
+
+      if(elem.hasClass("is-disabled")) {
+        return;
+      }
+
+      if(mainCount >= 0 && mainCount < countBlockSlider) {
+        blockSlider.hide();
+        blockSlider.eq(mainCount).show();
+        mainCount--;
+      }
+
+      sliderBtnRight.removeClass("is-disabled");
+
+      if (mainCount < 0) {
+        elem.addClass("is-disabled");
+        mainCount = 1;
+      }
+    });
+    sliderBtnRight.on('click', (ev) => {
+      const elem = $(ev.currentTarget);
+
+      if(elem.hasClass("is-disabled")) {
+        return;
+      }
+
+      if(mainCount > 0 && mainCount < countBlockSlider) {
+        blockSlider.hide();
+        blockSlider.eq(mainCount).show();
+        mainCount++;
+      }
+
+      sliderBtnLeft.removeClass("is-disabled");
+
+      if (mainCount === 3) {
+        elem.addClass("is-disabled");
+        mainCount -= 2;
+      }
+    });
   }
 };

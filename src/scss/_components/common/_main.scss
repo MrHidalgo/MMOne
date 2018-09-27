@@ -18,7 +18,7 @@
   }
   @include respond(max-small) {
     height: auto;
-    min-height: 575px;
+    min-height: auto;
     padding-top: 15px;
   }
 
@@ -47,7 +47,7 @@
       margin-right: 0;
     }
     @include respond(max-small) {
-      padding: 15px;
+      padding: 15px !important;
     }
 
     .home & {
@@ -105,6 +105,15 @@
     bottom: 0;
     width: 100%;
     min-height: 212px;
+    @include respond(max-small) {
+      position: relative;
+      width: calc(100% + 30px);
+      min-height: auto;
+      margin-left: -15px;
+      margin-right: -15px;
+      margin-top: 30px;
+      background-color: rgba($c-black, 0.6);
+    }
 
     &.is-start-animation {
       .main__info-block {
@@ -125,6 +134,37 @@
       }
     }
 
+    &-btn {
+      display: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      @include respond(max-small) {
+        display: flex;
+      }
+
+      &--left {
+        left: 10px;
+      }
+      &--right {
+        right: 10px;
+
+        .icon-png {
+          transform: rotate(180deg);
+        }
+      }
+
+      .icon-png {
+        display: block !important;
+      }
+
+      &.is-disabled {
+        opacity: 0.75;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+    }
+
     &-wrap,
     &-extra {
       display: flex;
@@ -137,6 +177,11 @@
     }
     &-wrap {
       min-height: 212px;
+      @include respond(max-small) {
+        min-height: auto;
+        padding-left: 45px;
+        padding-right: 45px;
+      }
     }
     &-extra {
       z-index: 0;
@@ -147,6 +192,9 @@
       right: 0;
       width: 100%;
       height: 100%;
+      @include respond(max-small) {
+        display: none;
+      }
 
       &.is-hover {
         .main__info-box {
@@ -166,6 +214,9 @@
       transform: translateY(70px);
       box-shadow: 0 -2px 10px 0 rgba($c-black, 0.15);
       @include transition(transform);
+      @include respond(max-small) {
+        display: none;
+      }
 
       &.is-default {
         transform: translateY(0) !important;
@@ -203,6 +254,13 @@
       transform: translateY(100%);
       background-color: rgba($c-black, 0.6);
       @include transition(transform 0.75s);
+      @include respond(max-small) {
+        display: none;
+        width: 100%;
+        padding: 15px 0;
+        transform: translateY(0);
+        background-color: transparent;
+      }
 
       &:after {
         content: "";
@@ -212,9 +270,15 @@
         bottom: 0;
         width: 100%;
         height: 5px;
+        @include respond(max-small) {
+          display: none;
+        }
       }
 
       &-0 {
+        @include respond(max-small) {
+          display: block;
+        }
         &:after {
           background-color: #ff000f;
         }
@@ -248,10 +312,20 @@
       text-align: center;
       font-size: 16px;
       font-weight: bold;
+      @include respond(max-small) {
+        order: 1;
+        text-align: left;
+      }
+      @include respond(max-extra-small) {
+        font-size: 14px;
+      }
     }
 
     &-img {
       margin-bottom: 15px;
+      @include respond(max-small) {
+        display: none;
+      }
 
       img {
         display: block;
@@ -259,11 +333,20 @@
         height: auto;
         margin-left: auto;
         margin-right: auto;
+        @include respond(max-small) {
+          margin-left: 0;
+        }
       }
     }
 
     &-text {
       width: 100%;
+      @include respond(max-small) {
+        order: 3;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
 
       p {
         width: 100%;
@@ -271,13 +354,28 @@
         color: $c-white;
         text-align: center;
         font-size: 12px;
+        @include respond(max-small) {
+          max-width: calc(100% - 60px);
+          padding-bottom: 0;
+          text-align: left;
+        }
+      }
 
+      img {
+        display: none;
+        @include respond(max-small) {
+          display: block;
+          height: 45px;
+        }
       }
     }
 
     .icon-png {
       display: flex;
       justify-content: center;
+      @include respond(max-small) {
+        display: none;
+      }
     }
   }
 }

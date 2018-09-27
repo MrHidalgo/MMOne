@@ -1,29 +1,38 @@
 $sprite: (
-  bkng_arrow: (
+  arrow-slider: (
     offset-x: 0px,
-    offset-y: -25px,
+    offset-y: 0px,
+    width: 16px,
+    height: 52px,
+    total-width: 41px,
+    total-height: 52px,
+    image: '../img/sprite.png'
+  ),
+  bkng_arrow: (
+    offset-x: -21px,
+    offset-y: -42px,
     width: 11px,
     height: 10px,
-    total-width: 39px,
-    total-height: 35px,
+    total-width: 41px,
+    total-height: 52px,
     image: '../img/sprite.png'
   ),
   dropdown: (
-    offset-x: -25px,
-    offset-y: 0px,
+    offset-x: -21px,
+    offset-y: -25px,
     width: 14px,
     height: 12px,
-    total-width: 39px,
-    total-height: 35px,
+    total-width: 41px,
+    total-height: 52px,
     image: '../img/sprite.png'
   ),
   i-lang: (
-    offset-x: 0px,
+    offset-x: -21px,
     offset-y: 0px,
     width: 20px,
     height: 20px,
-    total-width: 39px,
-    total-height: 35px,
+    total-width: 41px,
+    total-height: 52px,
     image: '../img/sprite.png'
   ),
 );
@@ -71,6 +80,9 @@ $sprite: (
   }
 }
 
+.arrow-slider:before {
+  @include sprite(arrow-slider);
+}
 .bkng_arrow:before {
   @include sprite(bkng_arrow);
 }
