@@ -12,7 +12,7 @@ $(window).on("load", (ev) => {
  * @description Window on resize.
  */
 $(window).on("resize", (ev) => {
-  initMainInfoAnimation();
+  initMainInfoAnimation(1);
 });
 
 

@@ -4,8 +4,14 @@
  * @name initMainInfoAnimation
  * @description
  */
-const initMainInfoAnimation = () => {
+const initMainInfoAnimation = (countVal) => {
+  const sliderBtnLeft = $("[slider-left-js]"),
+    sliderBtnRight = $("[slider-right-js]"),
+    blockSlider = $(".main__info-block");
+
   if($(window).width() > 767) {
+    blockSlider.removeAttr("style");
+
     const mainInfo = $(".main__info"),
       infoBox = $(".main__info-box"),
       infoBlock = $(".main__info-block");
@@ -43,13 +49,12 @@ const initMainInfoAnimation = () => {
     function is_touch_device() {
       return 'ontouchstart' in window;
     }
-  } else {
-    const sliderBtnLeft = $("[slider-left-js]"),
-      sliderBtnRight = $("[slider-right-js]");
 
-    let blockSlider = $(".main__info-block"),
-      countBlockSlider = blockSlider.length,
-      mainCount = 1;
+    sliderBtnLeft.unbind('click');
+    sliderBtnRight.unbind('click');
+  } else {
+    let countBlockSlider = blockSlider.length,
+      mainCount = 1 || countVal;
 
     sliderBtnLeft.on('click', (ev) => {
       const elem = $(ev.currentTarget);
@@ -86,7 +91,7 @@ const initMainInfoAnimation = () => {
 
       sliderBtnLeft.removeClass("is-disabled");
 
-      if (mainCount === 3) {
+      if (mainCount > 2) {
         elem.addClass("is-disabled");
         mainCount -= 2;
       }
